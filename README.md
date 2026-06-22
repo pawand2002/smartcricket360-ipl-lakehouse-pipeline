@@ -536,11 +536,6 @@ For issues or questions:
 4. **Extend Analytics**: Add more sophisticated KPIs (player comparisons, trend analysis)
 5. **Integrate BI Tools**: Connect Power BI or Tableau to Unity Catalog views
 
----
-
-**Built with ❤️ using Databricks Lakehouse Platform**
-
----
 ## 👤 Author
 
 **Pawan Dubey**  
@@ -558,4 +553,8 @@ Cloud Data Architect | Databricks · Azure · GCP
 
 💼 Explore more projects on GitHub showcasing **cloud data engineering, migration strategies, and Lakehouse architectures**.
 
+---
+
+![Made with Love](https://img.shields.io/badge/Made%20with-❤️-pink?style=flat)
+![Powered by Databricks](https://img.shields.io/badge/Powered%20by-Databricks-red?logo=databricks)
 
