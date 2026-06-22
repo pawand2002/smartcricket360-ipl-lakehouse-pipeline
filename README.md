@@ -47,6 +47,54 @@ This implementation uses a **Hybrid Medallion Architecture** combining notebook 
 - 📊 **Dashboard‑ready datasets** exposed via Unity Catalog for Power BI & Tableau  
 - 🔒 **Governance & reliability** with Delta Lake ACID transactions and Unity Catalog security  
 
+👉 See the **Querying the Data** section below for sample SQL insights, including top batsmen, leading bowlers, and team rankings.
+
+---
+
+## 🔍 Querying the Data
+
+### Using Unity Catalog Views
+
+```sql
+-- Top 10 batsmen by total runs in 2023 season
+SELECT striker, season, total_runs, strike_rate, fours, sixes
+FROM ipl_complete.ipl_complete_analytics.batting_stats_vw
+WHERE season = '2023'
+ORDER BY total_runs DESC
+LIMIT 10;
+
+-- Top 10 bowlers by wickets in 2023
+SELECT bowler, season, wickets, economy_rate, bowling_average
+FROM ipl_complete.ipl_complete_analytics.bowling_stats_vw
+WHERE season = '2023'
+ORDER BY wickets DESC
+LIMIT 10;
+
+-- Team performance rankings
+SELECT team, season, wins, losses, total_runs, nrr
+FROM ipl_complete.ipl_complete_analytics.team_performance_vw
+WHERE season = '2023'
+ORDER BY wins DESC;
+
+-- Venue statistics
+SELECT venue, matches_played, avg_score, avg_wickets
+FROM ipl_complete.ipl_complete_analytics.venue_stats_vw
+ORDER BY matches_played DESC;
+```
+
+### Using Direct Delta Paths
+
+```python
+# Read from Silver layer
+silver_df = spark.read.format("delta") \
+    .load("/Volumes/ipl_complete/ipl_complete_analytics/silver/deliveries")
+
+# Filter for specific season
+season_2023 = silver_df.filter("season = '2023'")
+display(season_2023.limit(10))
+```
+
+---
 ## 🎯 Features
 
 ### Data Processing
@@ -230,52 +278,7 @@ The notebook supports **Run All** automation for end-to-end execution:
 --   - venue_stats_vw
 ```
 
----
 
-## 🔍 Querying the Data
-
-### Using Unity Catalog Views
-
-```sql
--- Top 10 batsmen by total runs in 2023 season
-SELECT striker, season, total_runs, strike_rate, fours, sixes
-FROM ipl_complete.ipl_complete_analytics.batting_stats_vw
-WHERE season = '2023'
-ORDER BY total_runs DESC
-LIMIT 10;
-
--- Top 10 bowlers by wickets in 2023
-SELECT bowler, season, wickets, economy_rate, bowling_average
-FROM ipl_complete.ipl_complete_analytics.bowling_stats_vw
-WHERE season = '2023'
-ORDER BY wickets DESC
-LIMIT 10;
-
--- Team performance rankings
-SELECT team, season, wins, losses, total_runs, nrr
-FROM ipl_complete.ipl_complete_analytics.team_performance_vw
-WHERE season = '2023'
-ORDER BY wins DESC;
-
--- Venue statistics
-SELECT venue, matches_played, avg_score, avg_wickets
-FROM ipl_complete.ipl_complete_analytics.venue_stats_vw
-ORDER BY matches_played DESC;
-```
-
-### Using Direct Delta Paths
-
-```python
-# Read from Silver layer
-silver_df = spark.read.format("delta") \
-    .load("/Volumes/ipl_complete/ipl_complete_analytics/silver/deliveries")
-
-# Filter for specific season
-season_2023 = silver_df.filter("season = '2023'")
-display(season_2023.limit(10))
-```
-
----
 
 ## 🛡️ Data Quality Expectations
 
