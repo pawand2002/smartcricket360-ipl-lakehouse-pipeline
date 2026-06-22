@@ -550,6 +550,7 @@ Cloud Data Architect | Databricks · Azure · GCP
 
 [![LinkedIn](https://img.shields.io/badge/Connect-LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/pawandubey1990/) 
 [![GitHub](https://img.shields.io/badge/Follow-GitHub-black?logo=github)](https://github.com/pawand2002)
+[![Email](https://img.shields.io/badge/Contact-Email-red?logo=gmail)](mailto:pdubey199020@gmail.com)
 
 💼 Explore more projects on GitHub showcasing **cloud data engineering, migration strategies, and Lakehouse architectures**.
 
