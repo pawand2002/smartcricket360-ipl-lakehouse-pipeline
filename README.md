@@ -1,5 +1,9 @@
 # 🏏 SmartCricket360 – IPL Data Engineering Framework
 
+![Databricks](https://img.shields.io/badge/Databricks-Delta%20Lake-FF3621?style=flat&logo=databricks&logoColor=white)
+![PySpark](https://img.shields.io/badge/PySpark-3.4-E25A1C?style=flat&logo=apache-spark&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.10-3776AB?style=flat&logo=python&logoColor=white)
+
 ## Overview
 
 A production-grade data pipeline implementing the **Medallion Architecture** (Bronze → Silver → Gold) for comprehensive Indian Premier League (IPL) cricket analytics. This pipeline processes historical ball-by-ball delivery data and match metadata spanning multiple IPL seasons (2008-2026) to generate business-ready KPIs and insights.
@@ -15,7 +19,7 @@ This implementation uses a **Hybrid Medallion Architecture** combining notebook 
 
 ## 📐 Architecture Diagram
 
-
+![Architecture daigram](architecture/ipl_cricket_medallion_architecture.png)
 
 ---
 
