@@ -552,6 +552,10 @@ Cloud Data Architect | Databricks · Azure · GCP
 [![GitHub](https://img.shields.io/badge/Follow-GitHub-black?logo=github)](https://github.com/pawand2002)
 [![Email](https://img.shields.io/badge/Contact-Email-red?logo=gmail)](mailto:pdubey199020@gmail.com)
 
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=pawand2002.smartcricket360)
+![GitHub stars](https://img.shields.io/github/stars/pawand2002/smartcricket360-ipl-lakehouse-pipeline?style=social)
+![GitHub forks](https://img.shields.io/github/forks/pawand2002/smartcricket360-ipl-lakehouse-pipeline?style=social)
+
 💼 Explore more projects on GitHub showcasing **cloud data engineering, migration strategies, and Lakehouse architectures**.
 
 
