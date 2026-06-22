@@ -13,6 +13,7 @@
 ## 📐 Architecture Diagram
 
 ![Architecture daigram](architecture/ipl_cricket_medallion_architecture.png)
+*Bronze → Silver → Gold pipeline powering IPL insights with Databricks Lakehouse.*
 
 ---
 ## Overview
