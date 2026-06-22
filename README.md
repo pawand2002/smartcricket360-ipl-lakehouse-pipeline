@@ -1,11 +1,14 @@
 # 🏏 SmartCricket360 – IPL Data Engineering Framework
 
-![Databricks](https://img.shields.io/badge/Databricks-Delta%20Lake-FF3621?style=flat&logo=databricks&logoColor=white)
-![PySpark](https://img.shields.io/badge/PySpark-3.4-E25A1C?style=flat&logo=apache-spark&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3.10-3776AB?style=flat&logo=python&logoColor=white)
+# SmartCricket360 – IPL Lakehouse Pipeline
+![Databricks](https://img.shields.io/badge/Platform-Databricks-red)
+![Databricks LDP](https://img.shields.io/badge/Platform-Databricks%20LDP-red?logo=databricks)
+![Delta Lake](https://img.shields.io/badge/Storage-Delta%20Lake-blue)
+![Unity Catalog](https://img.shields.io/badge/Governance-Unity%20Catalog-green)
+![Spark](https://img.shields.io/badge/Engine-Apache%20Spark-orange)
 
 ## Overview
-
+### End‑to‑end IPL analytics pipeline built on Databricks Lakehouse using Medallion Architecture.
 A production-grade data pipeline implementing the **Medallion Architecture** (Bronze → Silver → Gold) for comprehensive Indian Premier League (IPL) cricket analytics. This pipeline processes historical ball-by-ball delivery data and match metadata spanning multiple IPL seasons (2008-2026) to generate business-ready KPIs and insights.
 
 ### Architecture Approach
