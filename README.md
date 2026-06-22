@@ -1,22 +1,12 @@
 # 🏏 SmartCricket360 – IPL Data Engineering Framework
 
-# SmartCricket360 – IPL Lakehouse Pipeline
+## SmartCricket360 – IPL Lakehouse Pipeline
+
 ![Databricks](https://img.shields.io/badge/Platform-Databricks-red)
 ![Databricks LDP](https://img.shields.io/badge/Platform-Databricks%20LDP-red?logo=databricks)
 ![Delta Lake](https://img.shields.io/badge/Storage-Delta%20Lake-blue)
 ![Unity Catalog](https://img.shields.io/badge/Governance-Unity%20Catalog-green)
 ![Spark](https://img.shields.io/badge/Engine-Apache%20Spark-orange)
-
-## Overview
-### End‑to‑end IPL analytics pipeline built on Databricks Lakehouse using Medallion Architecture.
-A production-grade data pipeline implementing the **Medallion Architecture** (Bronze → Silver → Gold) for comprehensive Indian Premier League (IPL) cricket analytics. This pipeline processes historical ball-by-ball delivery data and match metadata spanning multiple IPL seasons (2008-2026) to generate business-ready KPIs and insights.
-
-### Architecture Approach
-
-This implementation uses a **Hybrid Medallion Architecture** combining notebook flexibility with Lakeflow production features:
-
-* **Bronze & Silver Layers**: Notebook-based processing for fast one-time loads and custom transformations
-* **Gold Layer**: Lakeflow Spark Declarative Pipeline for production-grade quality monitoring and orchestration
 
 ---
 
@@ -25,6 +15,37 @@ This implementation uses a **Hybrid Medallion Architecture** combining notebook 
 ![Architecture daigram](architecture/ipl_cricket_medallion_architecture.png)
 
 ---
+## Overview
+### End‑to‑end IPL analytics pipeline built on Databricks Lakehouse using Medallion Architecture.
+A production-grade data pipeline implementing the **Medallion Architecture** (Bronze → Silver → Gold) for comprehensive Indian Premier League (IPL) cricket analytics. This pipeline processes historical ball-by-ball delivery data and match metadata spanning multiple IPL seasons (2008-2026) to generate business-ready KPIs and insights.
+
+### Architecture Approach
+
+This implementation uses a **Hybrid Medallion Architecture** combining notebook flexibility with Lakeflow production features:
+
+- **Bronze Layer (Raw Ingestion)**  
+  Notebook-based ingestion of IPL CSV files into Delta format. Handles season normalization, schema conflicts, and metadata filtering.
+
+- **Silver Layer (Cleansed & Enriched)**  
+  Notebook transformations to derive metrics (runs, wickets, boundaries), handle nulls, and partition data by season for performance.
+
+- **Gold Layer (Curated KPIs)**  
+  Lakeflow Spark Declarative Pipeline orchestrates production-grade tables (batting, bowling, team, match, venue). Includes 12 automated data quality expectations.
+
+- **Unity Catalog Views**  
+  SQL-queryable views over Gold tables for easy integration with Databricks SQL, Power BI, and Tableau.
+
+- **Governance & Reliability**  
+  Delta Lake ensures ACID transactions, schema evolution, and time travel. Unity Catalog enforces governance, lineage, and security.
+
+## 📊 Project Highlights
+
+- ⚡ **295K+ ball‑by‑ball records** processed across 18 IPL seasons (2008–2026)  
+- 🛡️ **12 automated data quality expectations** (null checks, range validations, business rules)  
+- 🏆 **5 curated Gold tables**: batting, bowling, team performance, match summary, venue stats  
+- 🔄 **Incremental updates & lineage tracking** with Lakeflow pipelines  
+- 📊 **Dashboard‑ready datasets** exposed via Unity Catalog for Power BI & Tableau  
+- 🔒 **Governance & reliability** with Delta Lake ACID transactions and Unity Catalog security  
 
 ## 🎯 Features
 
