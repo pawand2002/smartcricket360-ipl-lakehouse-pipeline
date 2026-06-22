@@ -7,13 +7,16 @@
 ![Delta Lake](https://img.shields.io/badge/Storage-Delta%20Lake-blue)
 ![Unity Catalog](https://img.shields.io/badge/Governance-Unity%20Catalog-green)
 ![Spark](https://img.shields.io/badge/Engine-Apache%20Spark-orange)
+[![LinkedIn](https://img.shields.io/badge/Connect-LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/pawandubey1990/)
 
 ---
 
 ## 📐 Architecture Diagram
 
 ![Architecture daigram](architecture/ipl_cricket_medallion_architecture.png)
-*Bronze → Silver → Gold pipeline powering IPL insights with Databricks Lakehouse.*
+🏏📊⚡ Bronze → Silver → Gold pipeline powering IPL insights with Databricks Lakehouse  
+🔴 Databricks LDP | 🔵 Delta Lake | 🟢 Unity Catalog | 🟠 Apache Spark | 🟡 Power BI
+
 
 ---
 ## Overview
@@ -536,3 +539,18 @@ For issues or questions:
 ---
 
 **Built with ❤️ using Databricks Lakehouse Platform**
+
+---
+## 👤 Author
+
+**Pawan Dubey**  
+Cloud Data Architect | Databricks · Azure · GCP  
+15+ years in Data Engineering & Architecture  
+📍 Doha, Qatar  
+
+[![LinkedIn](https://img.shields.io/badge/Connect-LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/pawandubey1990/) 
+[![GitHub](https://img.shields.io/badge/Follow-GitHub-black?logo=github)](https://github.com/pawand2002)
+
+💼 Explore more projects on GitHub showcasing **cloud data engineering, migration strategies, and Lakehouse architectures**.
+
+
