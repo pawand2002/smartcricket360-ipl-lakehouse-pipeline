@@ -46,8 +46,7 @@ This implementation uses a **Hybrid Medallion Architecture** combining notebook 
 - 🔄 **Incremental updates & lineage tracking** with Lakeflow pipelines  
 - 📊 **Dashboard‑ready datasets** exposed via Unity Catalog for Power BI & Tableau  
 - 🔒 **Governance & reliability** with Delta Lake ACID transactions and Unity Catalog security  
-
-👉 See the **Querying the Data** section below for sample SQL insights, including top batsmen, leading bowlers, and team rankings.
+- 👉 See the **Querying the Data** section below for sample SQL insights, including top batsmen, leading bowlers, and team rankings.
 
 ---
 
